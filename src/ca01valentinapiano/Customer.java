@@ -65,5 +65,50 @@ public class Customer {
             System.out.println("The Last Purchased must be a valid year between 1900 to 2024, please correct it and try again! " + lastPurchasedAux);
         }
     }
+   
+   // Method to calculate the total after applying a discount end return  
+    public double discountFormula( double totalPurchasedAux, double percentageAux){
+       double discountAmount = (totalPurchasedAux / 100) * percentageAux;
+       return totalPurchasedAux - discountAmount;
+    }
+    
+    // Method to get the purchase discounted based on IDcustomer and the year of the purchase
+    public double getDiscount(){
+         // Get the total purchase amount 
+         double purchase = getTotalPurchase();
+         // Get the customer ID to determine amount discount
+         int id = getCustomerId();
+         // Get the year of the last purchase to apply time-based discounts
+         int year = getLastPurchased();
+          // Initialize discount variable
+         double discount = 0.0;
+        if (id == 1) { // Case for customer ID 1
+           if (year == 2024) {
+               discount = discountFormula(purchase, 30); // 30% discount for purchases in 2024
+           } else if (year >= 2020) {
+               discount = discountFormula(purchase, 20); // 20% discount for purchases in the last 5 years (from 2020 to 2023)
+           } else {
+               discount = discountFormula(purchase, 10); // 10% discount for purchases before 2020
+           }
+        } else if (id == 2) { // Case for customer ID 2
+           if (year == 2024) {
+               discount = discountFormula(purchase, 15); // 15% discount for purchases in 2024
+           } else if (year >= 2020) {
+               discount = discountFormula(purchase, 13); // 13% discount for purchases in the last 5 years (from 2020 to 2023)
+           } else {
+               discount = discountFormula(purchase, 5); // 5% discount for purchases before 2020
+           }
+        } else if (id == 3) { // Case for customer ID 3
+            if (year == 2024) {
+              discount = discountFormula(purchase, 10); // 10% discount for purchases in 2024
+            } else if (year >= 2020) {
+              discount = discountFormula(purchase, 8); // 8% discount for purchases in the last 5 years (from 2020 to 2023)
+            } else {
+              discount = discountFormula(purchase, 3); // 3% discount for purchases before 2020
+            }
+        }
+
+    return discount;
+    }
     
 }
