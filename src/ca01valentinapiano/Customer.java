@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -10,7 +10,7 @@
 // If the input is invalid, an error message is printed to inform the user of the issue.
 // Additionally, this class includes a method to calculate a discount based on the attributes contained within the object.
 // A discount standard calculation method is also included to avoid code duplication in the discount methods.
-/**
+
 
 
 package ca01valentinapiano;
