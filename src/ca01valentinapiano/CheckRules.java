@@ -2,6 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+
+// The purpose of the CheckRules class is to validate that the attributes of the object 
+// adhere to specific rules necessary for the proper functioning of the program
+
+
 package ca01valentinapiano;
 
 /**

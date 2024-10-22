@@ -2,6 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
+
+
+//The CA01ValentinaPiano class is designed to read customer data from an input file,
+//validate the data according to predefined rules, and write the results to an output file.
+//It performs the following tasks:
+// - Reads customer information from "customers.txt".
+// - Validates attributes such as full name, total purchased amount, customer ID, and last purchased year.
+// - Calculates discounts based on the validated data.
+// - Outputs the customer's full name and the calculated discount to "customerdiscount.txt"
+
+
 package ca01valentinapiano;
 
 import java.util.HashSet;
