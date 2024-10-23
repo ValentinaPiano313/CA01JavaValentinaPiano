@@ -35,7 +35,7 @@ public class CheckRules {
 public void validateIdValue(int idCustomerAux) {
     try {
         // Check if the provided ID less than 1 and greater than 3 
-        if (idCustomerAux < 1 && idCustomerAux > 3) {
+        if (idCustomerAux != 1 && idCustomerAux != 2 && idCustomerAux != 3) {
             // Throw an exception if the ID is invalid.(not equal to 1 or 2 or 3)
             throw new IllegalArgumentException("Invalid ID: Please enter an integer equal to 1, 2, or 3.");
         }
