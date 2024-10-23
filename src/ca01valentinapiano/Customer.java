@@ -96,27 +96,26 @@ public class Customer {
         if (id == 1) { // Case for customer ID 1
            if (year == 2024) {
                discount = discountFormula(purchase, 30); // 30% discount for purchases in 2024
-           } else if (year >= 2020) {
-               discount = discountFormula(purchase, 20); // 20% discount for purchases in the last 5 years (from 2020 to 2023)
-           } else {
-               discount = discountFormula(purchase, 10); // 10% discount for purchases before 2020
+           } else if (year < 2024 - 5) {
+               discount = discountFormula(purchase, 10); // 10% discount for no purchases in the last 5 years 
+           } else if (year < 2024) {
+               discount = discountFormula(purchase, 20); // 20% discount for purchases less than 2024
            }
         } else if (id == 2) { // Case for customer ID 2
            if (year == 2024) {
                discount = discountFormula(purchase, 15); // 15% discount for purchases in 2024
-           } else if (year >= 2020) {
-               discount = discountFormula(purchase, 13); // 13% discount for purchases in the last 5 years (from 2020 to 2023)
-           } else {
-               discount = discountFormula(purchase, 5); // 5% discount for purchases before 2020
+           } else if (year < 2024 - 5) {
+               discount = discountFormula(purchase, 5); // 5% discount for no purchases in the last 5 years
+           } else if (year < 2024) {
+               discount = discountFormula(purchase, 13); // 13% discount for purchases less than 2024
            }
         } else if (id == 3) { // Case for customer ID 3
             if (year == 2024) {
-              discount = discountFormula(purchase, 10); // 10% discount for purchases in 2024
-            } else if (year >= 2020) {
-              discount = discountFormula(purchase, 8); // 8% discount for purchases in the last 5 years (from 2020 to 2023)
-            } else {
-              discount = discountFormula(purchase, 3); // 3% discount for purchases before 2020
-            }
+              discount = discountFormula(purchase, 3); // 3% discount for purchases in 2024
+            } else  {
+              discount = discountFormula(purchase, 0); // 0% discount for purchse less than 2024
+            
+        }
         }
 
     return discount;
